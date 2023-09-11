@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move element &apos;App.java&apos; to &apos;S12- Collections Framework/S12- Collections Framework- Set/s12.CollectionsFramework.Sets&apos;&#x0D;&#x0A;- Original project: &apos;S12- Collections Framework&apos;&#x0D;&#x0A;- Destination element: &apos;S12- Collections Framework/S12- Collections Framework- Set/s12.CollectionsFramework.Sets&apos;&#x0D;&#x0A;- Original element: &apos;App.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/S12- Collections Framework- Set&lt;s12.CollectionsFramework.Sets" element1="/S12- Collections Framework- Set&lt;{App.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1693588558745" units="1" version="1.0"/>
-</session>

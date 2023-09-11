@@ -1,2 +1,0 @@
-INDEX VERSION 1.4+C:\Users\theyb\Desktop\Java Fullstack Udemy\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-4037628844.index

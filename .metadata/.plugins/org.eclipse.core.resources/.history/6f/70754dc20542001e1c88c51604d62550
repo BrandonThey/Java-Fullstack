@@ -1,7 +1,0 @@
-package s10.CoreConcepts.StaticInner;
-
-public class App {
-	public static void main(String[] args) {
-		
-	}
-}
