@@ -32,8 +32,12 @@ public class HelloWorld extends HttpServlet {
     
     //serves get requests, for example when a url is clicked, this method is called
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+
+		//a simple hello world message that is displayed on the console whenever a 
+		//call to the local host url is made
 		System.out.println("Hello World");
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		//printing hello world to the webpage using HTML Tags
+		response.getWriter().println("<h1>Hello World</h1>");
 	}
 }
