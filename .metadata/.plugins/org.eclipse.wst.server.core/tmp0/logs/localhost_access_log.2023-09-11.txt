@@ -8,3 +8,5 @@
 0:0:0:0:0:0:0:1 - - [11/Sep/2023:14:44:15 -0500] "GET /S20-JSP_And_Servlets-_Introduction/HelloWorld HTTP/1.1" 200 -
 0:0:0:0:0:0:0:1 - - [11/Sep/2023:14:48:06 -0500] "GET /S20-JSP_And_Servlets-_Introduction/HelloWorld HTTP/1.1" 200 -
 0:0:0:0:0:0:0:1 - - [11/Sep/2023:14:48:38 -0500] "GET /S20-JSP_And_Servlets-_Introduction/HelloWorld HTTP/1.1" 200 -
+127.0.0.1 - - [11/Sep/2023:14:48:44 -0500] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [11/Sep/2023:14:48:45 -0500] "GET /S20-JSP_And_Servlets-_Introduction/HelloWorld HTTP/1.1" 200 22
