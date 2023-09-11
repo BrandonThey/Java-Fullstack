@@ -1,0 +1,57 @@
+package s15.Multithreading.Synchronization.Deadlocks;
+
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+//there are some techniques we can use to prevent a deadlock
+//we will see them here
+public class Solution {
+
+	public static void main(String[] args) {
+
+		//firstly we want to use reentry locks as out lock structure
+		Lock lock1 = new ReentrantLock();
+		Lock lock2 = new ReentrantLock();
+		Thread thread1 = new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				//secondly lets get rid of the synchronized blocks and instead
+				//use the locking mechanisms but still creating a deadlock
+				lock1.lock();
+				System.out.println("Inside thread 1 on lock 1");
+				lock2.lock();
+				System.out.println("Inside thread 1 on lock 2");
+				lock2.unlock();
+				lock1.unlock();
+			}
+		});
+		
+		Thread thread2 = new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				lock1.lock();
+				System.out.println("Inside thread 2 on lock 2");
+				lock2.lock();
+				System.out.println("Inside thread 2 on lock 1");
+				lock2.unlock();
+				lock1.unlock();
+			}
+		});
+
+		thread1.start();
+		thread2.start();
+		
+		try {
+			thread1.join();
+			thread2.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println("I am the main method");
+	}
+
+}

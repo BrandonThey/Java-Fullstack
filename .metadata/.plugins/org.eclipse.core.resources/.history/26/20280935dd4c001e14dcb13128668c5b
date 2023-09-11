@@ -1,0 +1,32 @@
+package s15.Multithreading.Synchronization.ThreadPools;
+
+//Threadpools help manage threads
+class SomeThread extends Thread{
+	private String name;
+
+	public SomeThread(String name) {
+		this.name = name;
+	}
+	
+	@Override
+	public void run() {
+		System.out.println("Starting thread: " + name);
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println("Running thread: " + name);
+	}
+}
+
+public class App {
+
+	public static void main(String[] args) {
+		//creating multiple threads so we can manage them
+		SomeThread thread1 = new SomeThread("Thread1");
+
+	}
+
+}

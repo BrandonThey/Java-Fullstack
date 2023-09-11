@@ -1,0 +1,16 @@
+package s10.CoreConcepts.UserInput;
+
+import java.util.Scanner;
+
+//playing and practicing with user inputs
+public class App {
+	public static void main(String[] args) {
+		System.out.println("What's your name");
+		Scanner input = new Scanner(System.in);
+		String name = input.nextLine(); //alternatively you can use input.next to only get the next word
+		System.out.println("Hello " + name + ". Have a nice day!");
+		
+		//closing the scanner
+		input.close();
+	}
+}

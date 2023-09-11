@@ -1,0 +1,18 @@
+package s12.CollectionsFramework.Arraylist;
+
+import java.util.ArrayList;
+
+public class App {
+	static ArrayList<String> names = new ArrayList<>();
+	
+	public static void main(String[] args) {
+		names.add("Brandon"); //adding to list
+		names.add("John");
+		System.out.println(names.get(0)); //getting single value from list
+		System.out.println(names); //getting all elements
+	}
+	
+	void removeName(int index) {
+		
+	}
+}

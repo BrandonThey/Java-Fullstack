@@ -1,0 +1,10 @@
+package s10.CoreConcepts.ExceptionHandling;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,19 @@
+package s16.LambdaExpressions.Predicates;
+
+import java.util.function.IntPredicate;
+
+//a predicate is a functional interface that performs an operation that returns
+//a boolean value
+public class App {
+
+	public static void main(String[] args) {
+		
+		//in the lambda expression, i is the argument being compared to the value
+		IntPredicate lessThan21 = i -> i < 21;
+		IntPredicate greaterThan21 = i -> i > 21;
+
+		System.out.println(lessThan21.test(19));
+		System.out.println(lessThan21.test(19));
+	}
+
+}

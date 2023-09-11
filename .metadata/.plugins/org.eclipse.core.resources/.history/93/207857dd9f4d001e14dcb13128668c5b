@@ -1,0 +1,42 @@
+package s16.LambdaExpressions.LambdaExpanded;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class Data{
+	private String name;
+
+	public Data(String name) {
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Data [name=" + name + "]";
+	}
+}
+public class App {
+
+	public static void main(String[] args) {
+		//creating a list of Data elements
+		List<Data> list = new ArrayList<>();
+		list.add(new Data("Brandon"));
+		list.add(new Data("Jason"));
+		list.add(new Data("Lauren"));
+		list.add(new Data("Mia"));
+		list.add(new Data("Eddy"));
+
+		for(Data data : list) {
+			System.out.println(data.getName());
+		}
+	}
+
+}

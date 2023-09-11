@@ -1,0 +1,10 @@
+package s10.CoreConcepts.StaticInner.outer;
+
+//practicing static inner classes
+public static class Outer {
+	public static class Inner{
+		public static void testingInnerMethod() {
+			System.out.println("testing inner class");
+		}
+	}
+}

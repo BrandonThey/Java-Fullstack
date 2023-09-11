@@ -1,0 +1,9 @@
+package s10.CoreConcepts.StaticInner;
+
+import s10.CoreConcepts.StaticInner.outer.outer;
+
+public class App {
+	public static void main(String[] args) {
+		outer.Inner.testingInnerMethod();
+	}
+}

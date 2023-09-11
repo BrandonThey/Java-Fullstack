@@ -1,0 +1,41 @@
+package s15.Multithreading.Synchronization.VolatileKeyword;
+
+public class App {
+
+	public static int flag = 0;
+	
+	public static void main(String[] args) {
+		new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				//infinite while loop that runs while the flag is set to 0
+				while(true){
+					if(flag == 0) {
+						System.out.println("Running");
+					}
+					else {
+						break;
+					}
+				}
+				
+			}
+		}).start();
+
+		new Thread(new Runnable() {
+			
+			//after 5000 miliseconds switch the flag to stop the loop
+			@Override
+			public void run() {
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				flag = 1;
+			}
+		});
+	}
+
+}

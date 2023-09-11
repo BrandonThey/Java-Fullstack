@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="S12- Collections Framework- Arraylist"/>
+	<classpathentry kind="src" path="S12- Collections Framework- Stack"/>
+	<classpathentry kind="src" path="S12- Collections Framework- LinkedList"/>
+	<classpathentry kind="src" path="S12- Collections Framework- Data Manipulation"/>
+	<classpathentry kind="src" path="S12- Collections Framework- Set"/>
+	<classpathentry kind="src" path="S12- Collections Framework- Queue"/>
+	<classpathentry kind="src" path="S12- Collections Framework- Maps"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

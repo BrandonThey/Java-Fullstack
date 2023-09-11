@@ -1,0 +1,11 @@
+package s19.GitBasics;
+
+//simple hello world project to use with git and version control
+public class App {
+
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+
+	}
+
+}

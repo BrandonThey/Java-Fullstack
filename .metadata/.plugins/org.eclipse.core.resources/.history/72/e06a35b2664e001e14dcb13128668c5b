@@ -1,0 +1,5 @@
+package s17.FileHandling.Serialization;
+
+public class Vehicle {
+
+}

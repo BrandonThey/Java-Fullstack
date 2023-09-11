@@ -1,0 +1,14 @@
+package s10.CoreConcepts.UserInput.test;
+
+public class TestStatic {
+	int staticVar = 0;
+
+	public int getStaticVar() {
+		return staticVar;
+	}
+
+	public void setStaticVar(int staticVar) {
+		this.staticVar = staticVar;
+	}
+	
+}

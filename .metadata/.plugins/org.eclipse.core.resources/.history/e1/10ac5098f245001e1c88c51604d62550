@@ -1,0 +1,10 @@
+package s12.CollectionsFramework.DataManipulation;
+
+public class Comparable {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

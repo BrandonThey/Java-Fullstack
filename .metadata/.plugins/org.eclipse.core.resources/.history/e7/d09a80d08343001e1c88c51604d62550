@@ -1,0 +1,23 @@
+package s10.CoreConcepts.ExceptionHandling;
+
+public class App {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+	//in case one we do manual, compile time error checking using conditions
+	public void caseOne(int x, int y) {
+		if(y != 0) {
+			System.out.println(x / y);
+		}
+		else{
+			System.out.println("The value of y is 0");
+		}
+	}
+	
+	public void caseTwo(int x, int y) {
+		
+	}
+}

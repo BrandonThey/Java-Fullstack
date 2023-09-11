@@ -1,0 +1,38 @@
+package s13.ComparableGenerics;
+
+//creating a class that implements Comparable that will allow us to use ordering
+//we need to bind T to comparable first thouhg
+class Data<T extends Comparable <T>> implements Comparable<T>{
+	private T storedData;
+
+	public Data(T storedData) {
+		super();
+		this.storedData = storedData;
+	}
+
+	public T getStoredData() {
+		return storedData;
+	}
+
+	public void setStoredData(T storedData) {
+		this.storedData = storedData;
+	}
+
+	@Override
+	public String toString() {
+		return "Data [storedData=" + storedData + "]";
+	}
+
+	@Override
+	public int compareTo(T o) {
+		return getStoredData().compareTo(0);
+	}
+}
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

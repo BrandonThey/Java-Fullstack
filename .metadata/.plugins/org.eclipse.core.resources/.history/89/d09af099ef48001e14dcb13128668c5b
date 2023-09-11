@@ -1,0 +1,10 @@
+package s12.CollectionsFramework.Deque;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

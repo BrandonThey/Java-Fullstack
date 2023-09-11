@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="S10- Core Concepts- Interfaces"/>
+	<classpathentry kind="src" path="S10- Core Concepts- Abstraction"/>
+	<classpathentry kind="src" path="S10- Core Concepts- Inner Classes"/>
+	<classpathentry kind="src" path="S10- Core Concepts- User Input"/>
+	<classpathentry kind="src" path="S10- Core Concepts- Static Inner Class"/>
+	<classpathentry kind="src" path="S10- Core Concepts- Exception Handling"/>
+	<classpathentry kind="src" path="S10- Core Concepts- Throws"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

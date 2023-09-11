@@ -1,0 +1,10 @@
+package s15.Multithreading.Synchronization.StaticSync;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

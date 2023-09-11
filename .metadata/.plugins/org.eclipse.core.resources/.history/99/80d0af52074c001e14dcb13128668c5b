@@ -1,0 +1,37 @@
+package s15.Multithreading.CreatingThreads;
+
+//creating threads by inheriting the threads class
+class MyCounter extends Thread{
+	private int threadNum;
+
+	public void countMe() {
+		for(int i = 1; i <= 9; i++) {
+			//adding a sleep to slow down the process by 1000 miliseconds
+			//to show the multithreading in process
+			try {
+				sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			
+			System.out.println("The value of i is: " + i + ". The thread number is: " + this.threadNum);
+		}
+	}
+	public MyCounter(int threadNum) {
+		this.threadNum = threadNum;
+	}
+	
+	
+}
+public class App {
+
+	public static void main(String[] args) {
+		MyCounter counter1 = new MyCounter(1);
+		MyCounter counter2 = new MyCounter(2);
+
+		counter1.countMe();
+		System.out.println();
+		counter2.countMe();
+	}
+
+}

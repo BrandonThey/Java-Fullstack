@@ -1,0 +1,20 @@
+import java.util.HashSet;
+import java.util.Set;
+
+//A Set has some properties that might prove useful
+//Sets are not allowed to have duplicate elements
+//There is no indexing, and the sequence of elements is not constant
+public class App {
+
+	public static void main(String[] args) {
+		Set<String> set = new HashSet<>();
+		
+		set.add("Brandon");
+		set.add("John");
+		set.add("Jason");
+		set.add("Lauren");
+		set.add("Mia");
+		set.add("Brandon");
+	}
+
+}

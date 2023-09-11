@@ -1,0 +1,12 @@
+package s12.CollectionsFramework.Deque;
+
+//A Deque is a double ended queue where elements can be 
+//inserted or removed from either the front or end of the queue
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

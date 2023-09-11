@@ -1,0 +1,16 @@
+package s12.CollectionsFramework.Maps;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class App {
+
+	public static void main(String[] args) {
+		Map<Integer, String> student = new HashMap<>();
+
+		student.put(3, "Brandon");
+		student.put(1, "Mia");
+		student.put(2, "John");
+	}
+
+}

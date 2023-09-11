@@ -1,0 +1,29 @@
+package s10.CoreConcepts.ExceptionHandling;
+
+public class App {
+
+	public static void main(String[] args) {
+		App object = new App();
+		object.caseOne(10, 2);
+
+	}
+
+	//in case one we do manual, compile time error checking using conditions
+	public void caseOne(int x, int y) {
+		if(y != 0) {
+			System.out.println(x / y);
+		}
+		else{
+			System.out.println("The value of y is 0");
+		}
+	}
+	
+	//error checking using runtime try catches
+	public void caseTwo(int x, int y) {
+		try {
+			System.out.println(x / y);
+		} catch(Exception e) {
+			System.out.println("The value of y is 0");
+		}
+	}
+}

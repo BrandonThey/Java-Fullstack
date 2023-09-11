@@ -1,0 +1,11 @@
+package s12.CollectionsFramework.Arraylist;
+
+import java.util.ArrayList;
+
+public class App {
+	static ArrayList<String> ListNames = new ArrayList<>();
+	
+	public static void main(String[] args) {
+		
+	}
+}

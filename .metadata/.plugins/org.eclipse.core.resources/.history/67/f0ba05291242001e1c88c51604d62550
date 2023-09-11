@@ -1,0 +1,9 @@
+package s10.CoreConcepts.Packages;
+
+public class App {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

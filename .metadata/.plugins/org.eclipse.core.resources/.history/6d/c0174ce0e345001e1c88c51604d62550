@@ -1,0 +1,23 @@
+package s12.CollectionsFramework.Stack;
+
+import java.util.Stack;
+
+public class App {
+
+	public static void main(String[] args) {
+		Stack<Integer> demoNums = new Stack<>();
+		
+		//stack adding method "push"
+		demoNums.push(0);
+		demoNums.push(1);
+		demoNums.push(2);
+		demoNums.push(3);
+		demoNums.push(4);
+		demoNums.push(5);
+
+		for(Integer number: demoNums) {
+			System.out.println(number);
+		}
+	}
+
+}

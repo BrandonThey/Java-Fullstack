@@ -1,0 +1,11 @@
+package s17.FileHandling.Serialization;
+
+public class WriteObject {
+
+	public static void main(String[] args) {
+		Vehicle bike = new Vehicle("bike", 9444);
+		Vehicle car = new Vehicle("car", 4268)
+
+	}
+
+}

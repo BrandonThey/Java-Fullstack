@@ -1,0 +1,6 @@
+package s10.CoreConcepts.UserInput.test;
+
+public class TestStatic {
+	int staticVar = 0;
+	
+}

@@ -1,0 +1,14 @@
+package s12.CollectionsFramework.Autoboxing;
+
+import java.util.ArrayList;
+
+public class App {
+
+	public static void main(String[] args) {
+		//we want to make an int list but ArrayList only accepts object types
+		//and int is a primitive so instead we use Integer instead of int
+		ArrayList<Integer> studentNumbers = new ArrayList<>(); 
+		studentNumbers.add(25);
+	}
+
+}
