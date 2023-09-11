@@ -1,0 +1,10 @@
+127.0.0.1 - - [11/Sep/2023:14:15:54 -0500] "GET / HTTP/1.1" 404 752
+127.0.0.1 - - [11/Sep/2023:14:41:33 -0500] "GET / HTTP/1.1" 404 752
+127.0.0.1 - - [11/Sep/2023:14:41:49 -0500] "GET / HTTP/1.1" 404 752
+127.0.0.1 - - [11/Sep/2023:14:42:19 -0500] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [11/Sep/2023:14:42:20 -0500] "GET /S20-JSP_And_Servlets-_Introduction/WEB-INF/classes/s20/JSPAndServlets/Introduction/HelloServlets HTTP/1.1" 404 683
+0:0:0:0:0:0:0:1 - - [11/Sep/2023:14:43:44 -0500] "GET /S20-JSP_And_Servlets-_Introduction/HelloWorld HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2023:14:44:13 -0500] "GET /S20-JSP_And_Servlets-_Introduction/HelloWorld HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2023:14:44:15 -0500] "GET /S20-JSP_And_Servlets-_Introduction/HelloWorld HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2023:14:48:06 -0500] "GET /S20-JSP_And_Servlets-_Introduction/HelloWorld HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [11/Sep/2023:14:48:38 -0500] "GET /S20-JSP_And_Servlets-_Introduction/HelloWorld HTTP/1.1" 200 -
