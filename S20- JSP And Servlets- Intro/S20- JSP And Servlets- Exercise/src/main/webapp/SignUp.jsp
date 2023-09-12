@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Login</title>
+<title>Sign Up</title>
 </head>
 <body>
-	<h1>Login Page</h1>
+	<h1>Sign Up</h1>
 </body>
 </html>

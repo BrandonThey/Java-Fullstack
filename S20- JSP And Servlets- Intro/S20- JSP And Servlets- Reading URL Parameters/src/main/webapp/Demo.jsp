@@ -21,7 +21,7 @@ without changing the url--%>
 <%-- <jsp:forward page="Forward.jsp"></jsp:forward> --%>
 
 <%-- Creating a redirect to the Redirect.jsp file which will run the application there 
-AND changing the url--%>
+AND changing the url, But you cannot redirect/forward after one another--%>
 <%
 	response.sendRedirect("Redirect.jsp");
 %>
