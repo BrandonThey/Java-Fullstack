@@ -7,6 +7,8 @@
 <title>Request got redirected</title>
 </head>
 <body>
-Request was redirected
+<%
+	out.println("Request was redirected");
+%>
 </body>
 </html>

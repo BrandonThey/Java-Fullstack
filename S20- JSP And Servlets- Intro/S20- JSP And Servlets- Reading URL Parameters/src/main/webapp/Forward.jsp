@@ -7,7 +7,9 @@
 <title>Request got forwarded</title>
 </head>
 <body>
+<%
+	out.println("Request was forwarded");
+%>
 
-Request was forwarded
 </body>
 </html>

@@ -4,9 +4,27 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Demo</title>
 </head>
 <body>
+<%
+	out.println("It's from the original page");
+%>
+
+<%-- Creating a forward to the forward.jsp file which will run the application there 
+without changing the url--%>
+<%
+	//request.getRequestDispatcher("Forward.jsp").forward(request,response);
+%>
+
+<%-- Secondary way to forward --%>
+<%-- <jsp:forward page="Forward.jsp"></jsp:forward> --%>
+
+<%-- Creating a redirect to the Redirect.jsp file which will run the application there 
+AND changing the url--%>
+<%
+	response.sendRedirect("Redirect.jsp");
+%>
 
 </body>
 </html>
