@@ -30,7 +30,7 @@ public class ParametersServlet extends HttpServlet {
 		response.getWriter().println("SampleWeb.org");
 		
 		//the request gets the url paramater with the name of getValue1
-		//so in the url if formatted like ".../Servlet?getValue1=TestingParam"
+		//so in the url if formatted like ".../ParametersServlet?getValue1=TestingParam"
 		//the written response is TestingParam
 		response.getWriter().println(request.getParameter("getValue1"));
 		//we can even get multiple values if formatted like
