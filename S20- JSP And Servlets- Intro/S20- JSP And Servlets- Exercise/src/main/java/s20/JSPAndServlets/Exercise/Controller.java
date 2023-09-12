@@ -29,7 +29,9 @@ public class Controller extends HttpServlet {
 		String param = request.getParameter("page");
 		
 		//conditional forwarding/redirecting based on what page parameter was entered
-		if(param.equals("login")) {
+		if(param == null) {
+			getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+		} else if(param.equals("login")) {
 			getServletContext().getRequestDispatcher("/Login.jsp").forward(request, response);
 		} else if(param.equals("signup")) {
 			getServletContext().getRequestDispatcher("/SignUp.jsp").forward(request, response);
