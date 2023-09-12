@@ -1,5 +1,8 @@
 package s20.JSPAndServlets.Annotations;
 
+//the Deployment Descriptor is based on the web.xml file and has various settings
+//and configurations, but annotations take over the majority of the work of 
+//the descriptors
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -10,6 +13,11 @@ import java.io.IOException;
 /**
  * Servlet implementation class Hello
  */
+
+//this annotation provides us an addon to the url would be "url/hello" and can be changed
+//through editing the string and rerunning the servlet but this can also be done
+//in the deployment descriptors for older versions
+@WebServlet("/Hello")
 public class Hello extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
