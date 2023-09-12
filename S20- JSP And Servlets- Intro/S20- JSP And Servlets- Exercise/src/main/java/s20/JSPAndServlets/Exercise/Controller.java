@@ -30,7 +30,7 @@ public class Controller extends HttpServlet {
 		
 		//conditional forwarding/redirecting based on what page parameter was entered
 		if(param.equals("login")) {
-			getServletContext().getRequestDispatcher("Login.jsp").forward(request, response);
+			getServletContext().getRequestDispatcher("/Login.jsp").forward(request, response);
 		} 
 	}
 
