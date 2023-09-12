@@ -13,8 +13,8 @@
 	forwarded/redirected --%>
 	<%-- getting the context path of the url and adding the /Controller?page=login
 	to create our url link  --%>
-	<a href = "<%= request.getContextPath()%>/Controller?page=login">Login Here!</a>
-	<a href = "<%= request.getContextPath()%>/Controller?page=signup">Sign Up</a>
-	<a href = "<%= request.getContextPath()%>/Controller?page=about">Learn more about us!</a>
+	<a href = "<%= request.getContextPath()%>/Controller?page=login">Login Here!</a><br/>
+	<a href = "<%= request.getContextPath()%>/Controller?page=signup">Sign Up</a><br/>
+	<a href = "<%= request.getContextPath()%>/Controller?page=about">Learn more about us!</a><br/>
 </body>
 </html>
