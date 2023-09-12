@@ -12,6 +12,9 @@ import jakarta.servlet.http.HttpServletResponse;
 //-Go to Project, Go to Java Resources, Create new package in src, Create servlet
 //-Right click package, build path, configure build path, libraries,
 //  -click on module path, add libraries, server runtime
+//-Right click project, properties, project facets, tomcat selected
+
+//or whenever building a project just choose the tomcat target runtime
 /**
  * Servlet implementation class HelloWorld
  */
