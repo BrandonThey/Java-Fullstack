@@ -31,5 +31,9 @@ out.println("Value 2: " + request.getParameter("getValue2"));
 <%-- We can also import java libraries and classes --%>
 <%@ page import="java.util.Date" %>
 <%= new Date() %>
+
+<%-- to import a clas we need its package and name --%>
+<%@ page import="s20.JSPAndServlets.ImportedClasses.UserDefined" %>
+<% out.print(new UserDefined().Demo()); %>
 </body>
 </html>
