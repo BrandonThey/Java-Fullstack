@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Request got redirected</title>
+<title>Insert title here</title>
 </head>
 <body>
-Request was redirected
+
 </body>
 </html>
