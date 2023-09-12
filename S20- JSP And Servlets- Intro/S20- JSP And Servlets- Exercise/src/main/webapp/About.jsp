@@ -8,5 +8,6 @@
 </head>
 <body>
 	<h1>It's a website!</h1>
+	<a href = "<%= request.getContextPath()%>/Controller">Homepage!</a><br/>
 </body>
 </html>
