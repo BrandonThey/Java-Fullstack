@@ -13,12 +13,15 @@ the submit jsp file --%>
 <form action="<%= request.getContextPath() %>/Controller" method="post">
 	<%-- The form's input box asking for a name, which is of type text, and naming the 
 	form input "name" --%>
-	Full Name: <input type="text" name="name"/><br/>
+	<%-- adding the required keywords forces the user to enter a name --%>
+	Full Name: <input type="text" name="name" required/><br/>
 	
 	<%-- The form's radio buttons waiting for a selection, which is of type radio, and naming the 
 	form input "gender", and setting any returned values --%>
 	Gender:  
-		<input type="radio" name="gender" value="Male"> Male
+		<%-- the checked option means that the male gender is checked by default
+		and the user cannot deselect an option --%>
+		<input type="radio" name="gender" value="Male" checked="checked"> Male
 		<input type="radio" name="gender" value="Female"> Female <br/>
 	
 	<%-- check box menu with multiple options --%>
