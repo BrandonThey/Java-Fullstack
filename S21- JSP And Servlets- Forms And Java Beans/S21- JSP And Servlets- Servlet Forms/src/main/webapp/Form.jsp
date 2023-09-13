@@ -10,6 +10,8 @@
 
 <%-- Creating a form that will send data to the controller servlet rather than
 the submit jsp file --%>
+<%-- the difference between method="get" and method="post" is that the user
+does not see the url parameters in the post --%>
 <form action="<%= request.getContextPath() %>/Controller" method="post">
 	<%-- The form's input box asking for a name, which is of type text, and naming the 
 	form input "name" --%>
