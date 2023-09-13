@@ -9,7 +9,7 @@
 <body>
 
 <%-- Creating a form that will send data to the submit.jsp file --%>
-<form action="Submit.jsp" method="get">
+<form action="Submit.jsp" method="post">
 	<%-- The form's input box asking for a name, which is of type text, and naming the 
 	form input "name" --%>
 	Full Name: <input type="text" name="name"/><br/>
@@ -22,18 +22,18 @@
 	
 	<%-- check box menu with multiple options --%>
 	Languages Known: 
-		<input type="Checkbox" name="language" value="english"> English
-		<input type="Checkbox" name="language" value="spanish"> Spanish
-		<input type="Checkbox" name="language" value="french"> French <br/>
+		<input type="Checkbox" name="language" value="English"> English
+		<input type="Checkbox" name="language" value="Spanish"> Spanish
+		<input type="Checkbox" name="language" value="French"> French <br/>
 	
 	<%-- country drop down menu --%>
 	Country: 
 		<select name="country">
-			<option value="usa">USA</option>
-			<option value="mexico">Mexico</option>
-			<option value="canada">Canada</option>
-			<option value="france">France</option>
-			<option value="india">India</option>
+			<option value="Usa">USA</option>
+			<option value="Mexico">Mexico</option>
+			<option value="Canada">Canada</option>
+			<option value="France">France</option>
+			<option value="India">India</option>
 		</select><br/>
 	
 	<%-- submit button --%>
