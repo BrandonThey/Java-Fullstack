@@ -9,12 +9,12 @@
 <body>
 
 <%-- Creating a form that will send data to the submit.jsp file --%>
-<form action="submit.jsp" method="get">
+<form action="Submit.jsp" method="get">
 	<%-- The form's input box asking for a name, which is of type text, and naming the 
 	form input "name" --%>
 	Full Name: <input type="text" name="name"/><br/>
 	
-	<%-- The form's radio menu waiting for a selection, which is of type radio, and naming the 
+	<%-- The form's radio buttons waiting for a selection, which is of type radio, and naming the 
 	form input "gender", and setting any returned values --%>
 	Gender:  
 		<input type="radio" name="gender" value="Male"> Male
@@ -24,7 +24,7 @@
 	Languages Known: 
 		<input type="Checkbox" name="language" value="english"> English
 		<input type="Checkbox" name="language" value="spanish"> Spanish
-		<input type="Checkbox" name="language" value="french"> French
+		<input type="Checkbox" name="language" value="french"> French <br/>
 	
 	<%-- country drop down menu --%>
 	Country: 
