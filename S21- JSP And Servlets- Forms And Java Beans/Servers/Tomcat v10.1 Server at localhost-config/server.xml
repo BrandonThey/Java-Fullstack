@@ -140,7 +140,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="S21- JSP And Servlets- Forms" path="/S20-_JSP_And_Servlets-_Forms" reloadable="true" source="org.eclipse.jst.jee.server:S21- JSP And Servlets- Forms"/><Context docBase="S21- JSP And Servlets- Servlet Forms" path="/S21-_JSP_And_Servlets-_Servlet_Forms" reloadable="true" source="org.eclipse.jst.jee.server:S21- JSP And Servlets- Servlet Forms"/></Host>
+      <Context docBase="S21- JSP And Servlets- Forms" path="/S20-_JSP_And_Servlets-_Forms" reloadable="true" source="org.eclipse.jst.jee.server:S21- JSP And Servlets- Forms"/><Context docBase="S21- JSP And Servlets- Servlet Forms" path="/S21-_JSP_And_Servlets-_Servlet_Forms" reloadable="true" source="org.eclipse.jst.jee.server:S21- JSP And Servlets- Servlet Forms"/><Context docBase="S21- JSP And Servlets- Beans" path="/S21-_JSP_And_Servlets-_Beans" reloadable="true" source="org.eclipse.jst.jee.server:S21- JSP And Servlets- Beans"/></Host>
     </Engine>
   </Service>
 </Server>

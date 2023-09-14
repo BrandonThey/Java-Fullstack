@@ -11,12 +11,13 @@
 	<jsp:useBean id="userForm" class="S21.JSPAndServlets.Beans.User" scope="session"></jsp:useBean>
 
 	<%-- Creating a form for the user to be able to enter their first and last name --%>
-	<form action="getForm.jsp">
+	<form action="GetForm.jsp" method="post">
 		<%--the name of the input should match the name of the properties you want to set
-		this allows a 1 to 1 relationship between the two --%>>
+		this allows a 1 to 1 relationship between the two --%>
 		First Name: <input type="text" name="firstName" value="<jsp:getProperty property="firstName" name="userForm"/>">
 		<br/>
 		Last Name: <input type="text" name="lastName" value="<jsp:getProperty property="lastName" name="userForm"/>">
+		<br/>
 		<input type="submit" value="submit">
 	</form>
 </body>
