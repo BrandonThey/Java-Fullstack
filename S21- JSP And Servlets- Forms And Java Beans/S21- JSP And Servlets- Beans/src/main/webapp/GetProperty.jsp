@@ -11,7 +11,8 @@
 	-Provides a default no-argument constructor
 	-Should be serializable which can implement the Serializable interface
 	-may have a number of properties that are read or written from/to
-	-any number of getters and setters for those properties --%>
+	-any number of getters and setters for those properties 
+	this allows us to easily send and receive data--%>
 	
 	<%-- Creating a bean with the id of "user" and using
 	our user class, as well as setting its scope --%>
