@@ -1,9 +1,11 @@
 package S21.JSPAndServlets.Beans;
 
 public class User {
-	String firstName;
-	String lastName;
+	private String firstName;
+	private String lastName;
 	public User() {
+		firstName = "John";
+		lastName = "Doe";
 	}
 	public String getFirstName() {
 		return firstName;
