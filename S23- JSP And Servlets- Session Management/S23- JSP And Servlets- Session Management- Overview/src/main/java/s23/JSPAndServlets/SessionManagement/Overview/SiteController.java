@@ -51,9 +51,9 @@ public class SiteController extends HttpServlet {
 			
 			//once everything else has been completed and the user is verified, we redirect
 			//them to a member only page
-			response.sendRedirect("memberArea.jsp");
+			response.sendRedirect("MemberArea.jsp");
 		} else {//if the username and password are invalid then we will redirect them back to the login page
-			response.sendRedirect("login.jsp");
+			response.sendRedirect("Login.jsp");
 		}
 	}
 
