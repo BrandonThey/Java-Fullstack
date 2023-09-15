@@ -2,6 +2,7 @@ package s23.JSPAndServlets.SessionManagement.Cookies;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -35,26 +36,24 @@ public class SiteController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//getting the username and password from any login post requests
-				String username = request.getParameter("username");
-				String password = request.getParameter("password");
+			String username = request.getParameter("username");
+			String password = request.getParameter("password");
 				
-				//some basic username and password validation 
-				if(username.equals("Brandon") && password.equals("12345")) {
-					//invalidating any previous available sessions to create a new one
-					request.getSession().invalidate();
-					HttpSession newSession = request.getSession(true);
-					
-					//creating a maximum inactive timer, so the session times out after a certain time
-					//here it will be 300 seconds
-					newSession.setMaxInactiveInterval(300);
-					
-					//once everything else has been completed and the user is verified, we redirect
-					//them to a member only page
-					response.sendRedirect("MemberArea.jsp");
-				} else {//if the username and password are invalid then we will redirect them back to the login page
-					response.sendRedirect("Login.jsp");
-				}
+			if(username.equals("Brandon") && password.equals("12345")) {
+				request.getSession().invalidate();
+				HttpSession newSession = request.getSession(true);	
+				newSession.setMaxInactiveInterval(300);
+				
+				//creating a cookie to store the username before redirecting
+				//the cookie class takes a name and a value as its parameters
+				Cookie cUsername = new Cookie("username", username);
+				//adding the cookie
+				response.addCookie(cUsername);
+				
+				response.sendRedirect("MemberArea.jsp");
+			} else {//if the username and password are invalid then we will redirect them back to the login page
+				response.sendRedirect("Login.jsp");
+			}
 	}
 
 }
