@@ -7,6 +7,24 @@
 <title>Member Area</title>
 </head>
 <body>
-	Welcome to the member only area!!
+	<%
+		String username = "", sessionID = "";
+		Cookie[] cookies = request.getCookies();
+		
+		//checking through the array of cookies to find a username or session id
+		//if one is available
+		if(cookies != null){
+			for(Cookie cookie: cookies){
+				if(cookie.getName().equals("username")){
+					username = cookie.getValue();	
+				}
+				if(cookie.getName().equals("JSESSIONID")){
+					sessionID = cookie.getValue();	
+				}
+			}
+		}
+	%>
+	Welcome <%= username %>> to the member only area!!
+	The session id is: <%= sessionID %>>
 </body>
 </html>
