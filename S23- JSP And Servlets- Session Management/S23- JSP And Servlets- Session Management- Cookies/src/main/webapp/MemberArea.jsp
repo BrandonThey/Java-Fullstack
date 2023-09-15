@@ -8,10 +8,10 @@
 </head>
 <body>
 	<%
-		String username = "", sessionID = "";
+		String username = null, sessionID = null;
 		Cookie[] cookies = request.getCookies();
 		
-		//checking through the array of cookies to find a username or session id
+		//checking through the array of cookies to find a username and/or session id
 		//if one is available
 		if(cookies != null){
 			for(Cookie cookie: cookies){
@@ -23,8 +23,13 @@
 				}
 			}
 		}
+		
+		//if there was no username or sessionID found then redirect back to the login page
+		if(sessionID == null || username == null){
+			response.sendRedirect("Login.jsp");
+		}
 	%>
-	Welcome <%= username %>> to the member only area!!
-	The session id is: <%= sessionID %>>
+	Welcome <%= username %> to the member only area!! <br/>
+	The session id is: <%= sessionID %>
 </body>
 </html>
