@@ -27,17 +27,17 @@ public class MemberAreaController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action = request.getParameter("action");
-		
+		String encodedPath = response.encodeURL(request.getContextPath());
 		switch(action) {
 		case "destroy":
 			request.getSession().invalidate();
-			response.sendRedirect(request.getContextPath() + "/SiteController?action=login");
+			response.sendRedirect(encodedPath + "/SiteController?action=login");
 			break;
 		case "memberArea":
 			request.getRequestDispatcher("MemberArea.jsp").forward(request,response);
 			break;
 		default:
-			response.sendRedirect(request.getContextPath() + "/SiteController?action=login");
+			response.sendRedirect(encodedPath + "/SiteController?action=login");
 			break;
 		}
 	}

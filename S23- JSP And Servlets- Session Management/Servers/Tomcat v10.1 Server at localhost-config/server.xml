@@ -140,7 +140,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="S23- JSP And Servlets- Session Management- Overview" path="/S23-_JSP_And_Servlets-_Session_Management-_Overview" reloadable="true" source="org.eclipse.jst.jee.server:S23- JSP And Servlets- Session Management- Overview"/><Context docBase="S23- JSP And Servlets- Session Management- Cookies" path="/S23-_JSP_And_Servlets-_Session_Management-_Cookies" reloadable="true" source="org.eclipse.jst.jee.server:S23- JSP And Servlets- Session Management- Cookies"/></Host>
+      <Context docBase="S23- JSP And Servlets- Session Management- Overview" path="/S23-_JSP_And_Servlets-_Session_Management-_Overview" reloadable="true" source="org.eclipse.jst.jee.server:S23- JSP And Servlets- Session Management- Overview"/><Context docBase="S23- JSP And Servlets- Session Management- Cookies" path="/S23-_JSP_And_Servlets-_Session_Management-_Cookies" reloadable="true" source="org.eclipse.jst.jee.server:S23- JSP And Servlets- Session Management- Cookies"/><Context docBase="S23- JSP And Servlets- Session Management- Fixing Links" path="/S23-_JSP_And_Servlets-_Session_Management-_Fixing_Links" reloadable="true" source="org.eclipse.jst.jee.server:S23- JSP And Servlets- Session Management- Fixing Links"/></Host>
     </Engine>
   </Service>
 </Server>
