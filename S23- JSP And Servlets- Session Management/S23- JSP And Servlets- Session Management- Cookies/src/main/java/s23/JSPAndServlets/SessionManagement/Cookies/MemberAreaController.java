@@ -27,28 +27,32 @@ public class MemberAreaController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//getting what action to take from the requesting member area jsp
-		String action = request.getParameter("action");
-		System.out.println(action);
+//		String action = request.getParameter("action");
+//		System.out.println(action);
 		//if the action is to destroy then we return to the login page and 
 		//remove previously made user cookies
-		switch(action) {
-		case "destroy":
-			//invalidating the member area page
-			request.getSession().invalidate();
-			Cookie[] cookies = request.getCookies();
-			//resetting username cookies
-			for(Cookie cookie : cookies) {
-				if(cookie.getName().equals("username")) {
-					cookie.setValue(null);
-					cookie.setMaxAge(0);
-					response.addCookie(cookie);
-				}
-			}
-			response.sendRedirect("Login.jsp");
-			break;
-		default:
-			break;
-		}
+//		switch(action) {
+//		case "destroy":
+//			Cookie[] cookies = request.getCookies();
+//			//resetting username cookies
+//			for(Cookie cookie : cookies) {
+//				if(cookie.getName().equals("username")) {
+//					cookie.setValue(null);
+//					cookie.setMaxAge(0);
+//					response.addCookie(cookie);
+//				}
+//			}
+//			
+//			response.sendRedirect("Login.jsp");
+//			break;
+//		default:
+//			break;
+//		}
+		
+		//refactoring the cookies to instead
+		//invalidate the member area page and redirecting
+		request.getSession().invalidate();
+		response.sendRedirect("Login.jsp");
 	}
 
 	/**

@@ -9,11 +9,11 @@
 <body>
 	<%
 		String username = null, sessionID = null;
-		Cookie[] cookies = request.getCookies();
 		
+		//Cookie[] cookies = request.getCookies();
 		//checking through the array of cookies to find a username and/or session id
 		//if one is available
-		if(cookies != null){
+		/*if(cookies != null){
 			for(Cookie cookie: cookies){
 				if(cookie.getName().equals("username")){
 					username = cookie.getValue();	
@@ -22,11 +22,16 @@
 					sessionID = cookie.getValue();	
 				}
 			}
-		}
+		}*/
 		
-		//if there was no username or sessionID found then redirect back to the login page
-		if(sessionID == null || username == null){
+		//refactoring the username and session cookies to instead use session attributes
+		//if the username attribute is null then redirect to login page else get
+		//the values 
+		if(request.getSession().getAttribute("username") == null){
 			response.sendRedirect("Login.jsp");
+		} else{
+			username = request.getSession().getAttribute("username").toString();
+			sessionID = request.getSession().getId();
 		}
 	%>
 	Welcome <%= username %> to the member only area!! <br/>

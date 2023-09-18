@@ -46,9 +46,14 @@ public class SiteController extends HttpServlet {
 				
 				//creating a cookie to store the username before redirecting
 				//the cookie class takes a name and a value as its parameters
-				Cookie cUsername = new Cookie("username", username);
+//				Cookie cUsername = new Cookie("username", username);
 				//adding the cookie
-				response.addCookie(cUsername);
+//				response.addCookie(cUsername);
+				
+				//instead of using cookies, we will now use session attributes
+				//this is because a cookie should instead be used for user preferences
+				//and not to store login details
+				newSession.setAttribute("username", username);
 				
 				response.sendRedirect("MemberArea.jsp");
 			} else {//if the username and password are invalid then we will redirect them back to the login page
