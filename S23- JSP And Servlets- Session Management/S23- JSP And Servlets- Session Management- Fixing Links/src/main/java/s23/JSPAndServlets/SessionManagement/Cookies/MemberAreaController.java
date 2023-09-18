@@ -36,6 +36,10 @@ public class MemberAreaController extends HttpServlet {
 		case "memberArea":
 			request.getRequestDispatcher("MemberArea.jsp").forward(request,response);
 			break;
+		case "memberOnly":
+			//another case that will direct to another member only page
+			request.getRequestDispatcher("MemberOnly.jsp").forward(request, response);
+			break;
 		default:
 			response.sendRedirect(encodedPath + "/SiteController?action=login");
 			break;
