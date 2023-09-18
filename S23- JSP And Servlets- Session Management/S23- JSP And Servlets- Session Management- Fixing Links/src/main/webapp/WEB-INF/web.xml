@@ -29,4 +29,13 @@
     <servlet-name>MemberAreaController</servlet-name>
     <url-pattern>/MemberAreaController</url-pattern>
   </servlet-mapping>
+  <filter>
+    <display-name>MemberAreaFilter</display-name>
+    <filter-name>MemberAreaFilter</filter-name>
+    <filter-class>s23.JSPAndServlets.SessionManagement.Filters.MemberAreaFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>MemberAreaFilter</filter-name>
+    <url-pattern>/MemberAreaFilter</url-pattern>
+  </filter-mapping>
 </web-app>
