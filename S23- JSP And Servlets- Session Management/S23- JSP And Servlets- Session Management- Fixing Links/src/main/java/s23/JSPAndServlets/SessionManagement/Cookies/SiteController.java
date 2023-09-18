@@ -66,7 +66,9 @@ public class SiteController extends HttpServlet {
 			HttpSession newSession = request.getSession(true);	
 			newSession.setMaxInactiveInterval(300);
 			newSession.setAttribute("username", username);		
-			response.sendRedirect("MemberArea.jsp");
+			//redirects to the member area controller and gives the action parameter of memberArea to forward
+			//to the member area page
+			response.sendRedirect(request.getContextPath() + "/MemberAreaController?action=memberArea");
 		} else {
 			//whenever possible we want to use the url to redirect rather than the file name
 			//so instead of using:
