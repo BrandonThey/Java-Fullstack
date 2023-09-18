@@ -44,7 +44,18 @@ public class SiteController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+		String action = request.getParameter("action");
+		
+		//creating a switch that directs the user based on the request
+		//if loginSubmit, then authenticate and get session information
+		switch(action) {
+		case "loginSubmit":
+			authenticate(request, response);
+			break;
+			
+		default:
+			break;
+		}
 	}
 
 	public void authenticate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
