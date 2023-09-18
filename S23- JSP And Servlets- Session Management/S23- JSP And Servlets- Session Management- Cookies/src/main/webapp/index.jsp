@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Home</title>
 </head>
 <body>
-
+	<%-- Creating a login page link that will redirect the user to the login page --%>
+	<a href="<%= request.getContextPath()%>/SiteController?action=login">Login</a>
 </body>
 </html>
