@@ -1,4 +1,4 @@
-package s23.JSPAndServlets.SessionManagement.FixingLinks;
+package s23.JSPAndServlets.SessionManagement.Cookies;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

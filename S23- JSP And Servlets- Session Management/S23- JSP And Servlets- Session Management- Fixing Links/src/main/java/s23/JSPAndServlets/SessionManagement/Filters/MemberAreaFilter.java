@@ -1,17 +1,19 @@
 package s23.JSPAndServlets.SessionManagement.Filters;
 
 import jakarta.servlet.Filter;
+import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpFilter;
-import java.io.IOException;
-import javax.servlet.FilterChain;
-import javax.servlet.FilterConfig;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
+import java.io.IOException;
+import jakarta.servlet.*;
 /**
  * Servlet Filter implementation class MemberAreaFilter
  */
+
+//this web filter is required, this means that the filter is based on the MemberAreaController
+@WebFilter("/MemberAreaController")
 public class MemberAreaFilter extends HttpFilter implements Filter {
        
     /**
@@ -32,12 +34,22 @@ public class MemberAreaFilter extends HttpFilter implements Filter {
 	/**
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
-	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		// TODO Auto-generated method stub
-		// place your code here
-
-		// pass the request along the filter chain
-		chain.doFilter(request, response);
+	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
+		//type casting the servlet request and response to Http servlet request and response objects
+		HttpServletResponse response = (HttpServletResponse) res;
+		HttpServletRequest request = (HttpServletRequest) req;
+		
+		//filtering out all requests to any links on the website if the username is null
+		//if it is null redirect all traffic to the site controller and thus the login page
+		//this prevents users from directly accessing a member area by url
+		//for example a user can directly access our second member only area if they have the
+		//url or search parameters since that page does not have any logic protecting it
+		if(request.getSession().getAttribute("username") == null) {
+			response.sendRedirect(request.getContextPath() + "/SiteController?action=login");
+		} else {
+			//if everything is good then we chain the response to the MemberAreaController
+			chain.doFilter(request, response);
+		}
 	}
 
 	/**
