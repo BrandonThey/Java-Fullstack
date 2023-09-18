@@ -31,5 +31,10 @@
 	%>
 	Welcome <%= username %> to the member only area!! <br/>
 	The session id is: <%= sessionID %>
+	
+	<%-- Creating a form that will destroy the user cookies on logout--%>
+	<form action="<%= request.getContextPath() %>/MemberAreaController" method="get">
+		<input type="hidden" name="action" value="destroy">
+	</form>
 </body>
 </html>
