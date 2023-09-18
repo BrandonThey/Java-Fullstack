@@ -44,29 +44,24 @@ public class SiteController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			String username = request.getParameter("username");
-			String password = request.getParameter("password");
-				
-			if(username.equals("Brandon") && password.equals("12345")) {
-				request.getSession().invalidate();
-				HttpSession newSession = request.getSession(true);	
-				newSession.setMaxInactiveInterval(300);
-				
-				//creating a cookie to store the username before redirecting
-				//the cookie class takes a name and a value as its parameters
-//				Cookie cUsername = new Cookie("username", username);
-				//adding the cookie
-//				response.addCookie(cUsername);
-				
-				//instead of using cookies, we will now use session attributes
-				//this is because a cookie should instead be used for user preferences
-				//and not to store login details
-				newSession.setAttribute("username", username);
-				
-				response.sendRedirect("MemberArea.jsp");
-			} else {//if the username and password are invalid then we will redirect them back to the login page
-				response.sendRedirect("Login.jsp");
-			}
+	
 	}
 
+	public void authenticate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+			
+		if(username.equals("Brandon") && password.equals("12345")) {
+			request.getSession().invalidate();
+			HttpSession newSession = request.getSession(true);	
+			newSession.setMaxInactiveInterval(300);
+			newSession.setAttribute("username", username);
+			
+			response.sendRedirect("MemberArea.jsp");
+		} else {
+			response.sendRedirect("Login.jsp");
+		}
+
+	}
 }
