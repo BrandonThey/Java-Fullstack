@@ -59,19 +59,19 @@ public class SiteController extends HttpServlet {
 	}
 
 	public void authenticate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-			
 		if(username.equals("Brandon") && password.equals("12345")) {
 			request.getSession().invalidate();
 			HttpSession newSession = request.getSession(true);	
 			newSession.setMaxInactiveInterval(300);
-			newSession.setAttribute("username", username);
-			
+			newSession.setAttribute("username", username);		
 			response.sendRedirect("MemberArea.jsp");
 		} else {
-			response.sendRedirect("Login.jsp");
+			//whenever possible we want to use the url to redirect rather than the file name
+			//so instead of using:
+			//response.sendRedirect("Login.jsp");
+			response.sendRedirect(request.getContextPath() + "/SiteController?action=login");
 		}
 
 	}

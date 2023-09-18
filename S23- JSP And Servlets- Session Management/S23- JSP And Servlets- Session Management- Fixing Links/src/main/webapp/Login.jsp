@@ -11,6 +11,8 @@
 	<form action="<%= request.getContextPath() %>/SiteController" method="post">
 		Username: <input type="text" name="username"><br/>
 		Password: <input type="password" name="password"><br/>
+		<%-- Hidden request parameter that will trigger the loginSubmit case --%>
+		<input type="hidden" name="action" value="loginSubmit">
 		<input type="submit" value="submit">
 	</form>
 </body>
