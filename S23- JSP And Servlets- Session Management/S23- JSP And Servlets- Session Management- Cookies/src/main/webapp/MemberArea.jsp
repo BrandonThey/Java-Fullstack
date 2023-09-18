@@ -35,6 +35,7 @@
 	<%-- Creating a form that will destroy the user cookies on logout--%>
 	<form action="<%= request.getContextPath() %>/MemberAreaController" method="get">
 		<input type="hidden" name="action" value="destroy">
+		<input type="submit" value="logout">
 	</form>
 </body>
 </html>

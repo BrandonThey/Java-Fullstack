@@ -2,6 +2,7 @@ package s23.JSPAndServlets.SessionManagement.Cookies;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -25,8 +26,29 @@ public class MemberAreaController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		//getting what action to take from the requesting member area jsp
+		String action = request.getParameter("action");
+		System.out.println(action);
+		//if the action is to destroy then we return to the login page and 
+		//remove previously made user cookies
+		switch(action) {
+		case "destroy":
+			//invalidating the member area page
+			request.getSession().invalidate();
+			Cookie[] cookies = request.getCookies();
+			//resetting username cookies
+			for(Cookie cookie : cookies) {
+				if(cookie.getName().equals("username")) {
+					cookie.setValue(null);
+					cookie.setMaxAge(0);
+					response.addCookie(cookie);
+				}
+			}
+			response.sendRedirect("Login.jsp");
+			break;
+		default:
+			break;
+		}
 	}
 
 	/**
